@@ -28,3 +28,8 @@ jobs:
         run: |
           # запуск проверки проекта по flake8
           python -m flake8
+          # перейти в папку, содержащую manage.py -
+          # <корневая папка infra_actions>/<папка проекта>/manage.py
+          cd infra_project/
+          # запустить написаные разработчиком тесты
+          python manage.py test
